@@ -1,0 +1,21 @@
+{
+  "name": "hotel-payment",
+  "version": "1.0.0",
+  "description": "microservice to simulate payment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "payment"
+  ],
+  "author": "Angel Ulise Tabares Gonzalez <taho2509@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "events": "^3.0.0",
+    "nats": "^1.2.2",
+    "node-nats-streaming": "0.0.51",
+    "nodemon": "^1.18.10"
+  }
+}
