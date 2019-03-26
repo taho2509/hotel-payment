@@ -1,9 +1,9 @@
 const stan = require('./stan');
 
-var publisher = function(data) {
+var rejecter = function(data) {
 
   stan.publish(
-    process.env.QUEUE_EVENT_FOR_SUCCESS,
+    process.env.QUEUE_EVENT_FOR_FAILURE,
     data,
     function(err, guid) {
       if (err) {
@@ -15,4 +15,4 @@ var publisher = function(data) {
   );
 };
 
-module.exports = publisher;
+module.exports = rejecter;

@@ -1,8 +1,11 @@
 const eventEmitter = require('./emitter');
 
-var paymentHandler = function() {
+var paymentHandler = function(data) {
     //simulate payment
-  setTimeout(()=>eventEmitter.emit('paid'),1000);
+    
+  setTimeout(()=>eventEmitter.emit('paid',data),1000);
+
+  //eventEmitter.emit('rejected',data);
 };
 
 module.exports = paymentHandler;
