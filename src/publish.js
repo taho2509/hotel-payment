@@ -4,7 +4,7 @@ var publisher = function(data) {
 
   stan.publish(
     process.env.QUEUE_EVENT_FOR_SUCCESS,
-    data,
+    JSON.stringify(data),
     function(err, guid) {
       if (err) {
         console.log('publish failed: ' + err);

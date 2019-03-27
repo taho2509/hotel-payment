@@ -4,7 +4,7 @@ var rejecter = function(data) {
 
   stan.publish(
     process.env.QUEUE_EVENT_FOR_FAILURE,
-    data,
+    JSON.stringify(data),
     function(err, guid) {
       if (err) {
         console.log('publish failed: ' + err);
